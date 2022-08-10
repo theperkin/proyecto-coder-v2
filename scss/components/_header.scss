@@ -1,0 +1,36 @@
+header {
+    .navbar {
+        padding: 8px 32px;
+        .logo {
+            width: 16%;
+            height: auto;
+            margin-right: 20px;
+        }
+        .nav-link {
+            font-weight: 500;
+            font-size: 20px;
+            color: #01adef;
+        }
+        .animacion a {
+            position: relative;
+            display: block;
+            padding: 5px;
+            &:hover::before {
+                transform: scaleX(1);
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background: linear-gradient(270deg, rgba(37,150,190,1) 0%, rgba(0,1,1,0.896796218487395) 100%);
+                z-index: 1;
+                transform: scaleX(0);
+                transform-origin: center;
+                transition: transform 0.5s ease-in-out;
+            }
+        }  
+    }
+}

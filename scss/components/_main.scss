@@ -1,0 +1,56 @@
+/* -------------- Sección Sobre mi -------------- */
+.nosotros {
+    margin-top: 16px;
+    margin-bottom: 10px;
+}
+
+/* Modificación de componente Accordion de Bootstrap */
+.accordion {
+    --bs-accordion-bg: #ffffff;
+    /*Modificación de variable interna de Bootstrap*/
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.accordion-button {
+    border-color: #01acef81;
+}
+
+.accordion-item {
+    border-color: #000;
+}
+
+/* -------------- Cards Equipos -------------- */
+.equipos {
+    text-align: center;
+    justify-content: center;
+    padding: 0 70px 70px 70px;
+}
+
+.botones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: row;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.imagen-team {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* -------------- Boton Contacto -------------- */
+.boton {
+    background-color: #01adef;
+}
+
+.mapa {
+    margin-bottom: 20px;
+}

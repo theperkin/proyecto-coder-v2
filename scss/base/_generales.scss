@@ -1,0 +1,66 @@
+/* Importanción de DM Sans from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: rgb(37, 150, 190);
+    background: linear-gradient(59deg, rgba(37, 150, 190, 1) 19%, rgba(0, 1, 1, 0.6839110644257703) 64%);
+}
+
+/* -------------- Estilos aplicables a todo el sitio -------------- */
+.container-fluid {
+    padding: 0;
+}
+
+.separador {
+    background-color: #01adef;
+    height: 3px;
+    opacity: 1;
+    border: none;
+}
+
+/* Media Queries */
+@media (max-width: 1389px) {
+    .botones {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 986px) {
+    .logo {
+        width: 30%;
+        height: auto;
+        margin-right: 20px;
+        
+    }
+}
+
+@media (max-width: 768px) {
+    .titulo-principal {
+        font-size: 48px;
+        text-align: center;
+        line-height: 48px;
+    }
+
+    footer p {
+        text-align: center;
+        margin: 8px;
+    }
+
+    .ig {
+        text-align: center;
+    }
+}
+
+@media (max-width: 579px) {
+
+    .navbar-brand {
+        font-size: 32px;
+    }
+}
