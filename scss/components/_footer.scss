@@ -1,11 +1,75 @@
-footer {
-    /* background-color: #01acef50; */
+.pie-pagina {
+    width: 100%;
+    background-color: #000000;
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.pie-pagina .grupo-1 .box figure {
+
+    @extend %flex;
+    @extend %dimension;
+}
+
+.pie-pagina .grupo-1 .box figure img {
+    width: 250px;
+
+    &:hover {
+        filter: saturate(180%);
+    }
+}
+
+.pie-pagina .grupo-1 .box h2 {
+    color: $color-principal;
+    margin-bottom: 25px;
+    font-size: 25px;
+}
+
+.pie-pagina .grupo-1 .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social a {
+    @include dimension (45px, 45px);
+    display: inline-block;
+    text-decoration: none;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: $color-secundario;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.pie-pagina .grupo-1 .red-social a:hover {
+    color: $color-principal;
+}
+
+.pie-pagina .grupo-2 {
+    background-color: $color-principal;
+    padding: 15px 10px;
+    text-align: center;
     color: #fff;
 }
 
-.ig {
-    text-align: right;
-    ;
-    text-decoration: none;
-    color: #fff;
+.pie-pagina .grupo-2 small {
+    font-size: 15px;
+}
+
+@media screen and (max-width: 843px) {
+    .pie-pagina .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
 }

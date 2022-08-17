@@ -4,6 +4,16 @@
     margin-bottom: 10px;
 }
 
+.img-fluid {
+    border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+
 /* Modificación de componente Accordion de Bootstrap */
 .accordion {
     --bs-accordion-bg: #ffffff;
@@ -11,8 +21,8 @@
 }
 
 .accordion-button:not(.collapsed) {
-    background-color: #000000;
-    color: rgb(255, 255, 255);
+    background-color: #ffffff;
+    color: $color-principal;
     font-weight: 600;
     font-size: 18px;
 }
@@ -22,14 +32,15 @@
 }
 
 .accordion-item {
-    border-color: #000;
+    border-color: $color-principal;
 }
+
 
 /* -------------- Cards Equipos -------------- */
 .equipos {
     text-align: center;
     justify-content: center;
-    padding: 0 70px 70px 70px;
+    padding: 0 60px 60px 60px;
 }
 
 .botones {
@@ -37,14 +48,24 @@
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: row;
     column-gap: 20px;
-    row-gap: 20px;
+    row-gap: 33px;
 }
 
 .imagen-team {
-    width: 100%;
-    height: 100%;
+    @extend %dimension;
     object-fit: cover;
+    border-radius: map-get($imagen-team, border-radius);
+    box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.75);
+    transition: 1.2s;
+
+    &:hover {
+        transform: scale(1.02);
+        filter: saturate(180%);
+    }
 }
+
 
 /* -------------- Boton Contacto -------------- */
 .boton {

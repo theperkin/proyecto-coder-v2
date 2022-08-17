@@ -1,5 +1,6 @@
 /* Importanción de DM Sans from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 * {
     margin: 0;
@@ -9,8 +10,7 @@
 
 body {
     font-family: 'DM Sans', sans-serif;
-    background: rgb(37, 150, 190);
-    background: linear-gradient(59deg, rgba(37, 150, 190, 1) 19%, rgba(0, 1, 1, 0.6839110644257703) 64%);
+    background-color: #e3f2fd;
 }
 
 /* -------------- Estilos aplicables a todo el sitio -------------- */
@@ -26,41 +26,33 @@ body {
 }
 
 /* Media Queries */
-@media (max-width: 1389px) {
-    .botones {
+@media (max-width: 950px) {
+
+    header nav .fixed-top {
+        position: none;
+    }
+
+    main section .equipos .botones {
         grid-template-columns: repeat(1, 1fr);
     }
 }
 
-@media (max-width: 986px) {
-    .logo {
-        width: 30%;
-        height: auto;
-        margin-right: 20px;
-        
-    }
-}
-
 @media (max-width: 768px) {
-    .titulo-principal {
+
+    nav .container-fluid .navbar-brand {
+        font-size: 16px;
+    }
+
+    .nosotros div div .titulo-principal {
         font-size: 48px;
         text-align: center;
         line-height: 48px;
     }
-
-    footer p {
-        text-align: center;
-        margin: 8px;
-    }
-
-    .ig {
-        text-align: center;
-    }
 }
 
-@media (max-width: 579px) {
+@media (max-width: 574px) {
 
-    .navbar-brand {
-        font-size: 32px;
+    nav .container-fluid .navbar-brand {
+        display: none;
     }
 }

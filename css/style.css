@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* Importanción de DM Sans from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -8,8 +9,7 @@
 
 body {
   font-family: 'DM Sans', sans-serif;
-  background: #2596be;
-  background: linear-gradient(59deg, #2596be 19%, rgba(0, 1, 1, 0.683911) 64%); }
+  background-color: #e3f2fd; }
 
 /* -------------- Estilos aplicables a todo el sitio -------------- */
 .container-fluid {
@@ -22,45 +22,55 @@ body {
   border: none; }
 
 /* Media Queries */
-@media (max-width: 1389px) {
-  .botones {
+@media (max-width: 950px) {
+  header nav .fixed-top {
+    position: none; }
+  main section .equipos .botones {
     grid-template-columns: repeat(1, 1fr); } }
 
-@media (max-width: 986px) {
-  .logo {
-    width: 30%;
-    height: auto;
-    margin-right: 20px; } }
-
 @media (max-width: 768px) {
-  .titulo-principal {
+  nav .container-fluid .navbar-brand {
+    font-size: 16px; }
+  .nosotros div div .titulo-principal {
     font-size: 48px;
     text-align: center;
-    line-height: 48px; }
-  footer p {
-    text-align: center;
-    margin: 8px; }
-  .ig {
-    text-align: center; } }
+    line-height: 48px; } }
 
-@media (max-width: 579px) {
-  .navbar-brand {
-    font-size: 32px; } }
+@media (max-width: 574px) {
+  nav .container-fluid .navbar-brand {
+    display: none; } }
+
+.pie-pagina .grupo-1 .box figure {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.imagen-team, .pie-pagina .grupo-1 .box figure {
+  width: 100%;
+  height: 100%; }
 
 header .navbar {
-  padding: 8px 32px; }
+  padding: 15px 32px;
+  backdrop-filter: blur(2px); }
   header .navbar .logo {
-    width: 16%;
+    width: 3rem;
     height: auto;
     margin-right: 20px; }
+  header .navbar .navbar-brand {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 25px;
+    font-weight: 600;
+    text-shadow: 2px 2px 0.5px rgba(255, 255, 255, 0.6); }
   header .navbar .nav-link {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 20px;
-    color: #01adef; }
+    color: #0a1a2a; }
   header .navbar .animacion a {
     position: relative;
     display: block;
     padding: 5px; }
+    header .navbar .animacion a .navbar-nav .nav-link .active, header .navbar .animacion a .navbar-nav .show > .nav-link {
+      color: #01adef; }
     header .navbar .animacion a:hover::before {
       transform: scaleX(1); }
     header .navbar .animacion a::before {
@@ -70,7 +80,7 @@ header .navbar {
       left: 0;
       width: 100%;
       height: 2px;
-      background: linear-gradient(270deg, #2596be 0%, rgba(0, 1, 1, 0.896796) 100%);
+      background: #000;
       z-index: 1;
       transform: scaleX(0);
       transform-origin: center;
@@ -81,14 +91,22 @@ header .navbar {
   margin-top: 16px;
   margin-bottom: 10px; }
 
+.img-fluid {
+  border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75); }
+
 /* Modificación de componente Accordion de Bootstrap */
 .accordion {
   --bs-accordion-bg: #ffffff;
   /*Modificación de variable interna de Bootstrap*/ }
 
 .accordion-button:not(.collapsed) {
-  background-color: #000000;
-  color: white;
+  background-color: #ffffff;
+  color: #01adef;
   font-weight: 600;
   font-size: 18px; }
 
@@ -96,25 +114,31 @@ header .navbar {
   border-color: #01acef81; }
 
 .accordion-item {
-  border-color: #000; }
+  border-color: #01adef; }
 
 /* -------------- Cards Equipos -------------- */
 .equipos {
   text-align: center;
   justify-content: center;
-  padding: 0 70px 70px 70px; }
+  padding: 0 60px 60px 60px; }
 
 .botones {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: row;
   column-gap: 20px;
-  row-gap: 20px; }
+  row-gap: 33px; }
 
 .imagen-team {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; }
+  object-fit: cover;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.75);
+  transition: 1.2s; }
+  .imagen-team:hover {
+    transform: scale(1.02);
+    filter: saturate(180%); }
 
 /* -------------- Boton Contacto -------------- */
 .boton {
@@ -123,11 +147,60 @@ header .navbar {
 .mapa {
   margin-bottom: 20px; }
 
-footer {
-  /* background-color: #01acef50; */
+.pie-pagina {
+  width: 100%;
+  background-color: #000000; }
+
+.pie-pagina .grupo-1 {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0px; }
+
+.pie-pagina .grupo-1 .box figure img {
+  width: 250px; }
+  .pie-pagina .grupo-1 .box figure img:hover {
+    filter: saturate(180%); }
+
+.pie-pagina .grupo-1 .box h2 {
+  color: #01adef;
+  margin-bottom: 25px;
+  font-size: 25px; }
+
+.pie-pagina .grupo-1 .box p {
+  color: #efefef;
+  margin-bottom: 10px; }
+
+.pie-pagina .grupo-1 .red-social a {
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  text-decoration: none;
+  line-height: 45px;
+  color: #fff;
+  margin-right: 10px;
+  background-color: #0a1a2a;
+  text-align: center;
+  transition: all 300ms ease; }
+
+.pie-pagina .grupo-1 .red-social a:hover {
+  color: #01adef; }
+
+.pie-pagina .grupo-2 {
+  background-color: #01adef;
+  padding: 15px 10px;
+  text-align: center;
   color: #fff; }
 
-.ig {
-  text-align: right;
-  text-decoration: none;
-  color: #fff; }
+.pie-pagina .grupo-2 small {
+  font-size: 15px; }
+
+@media screen and (max-width: 843px) {
+  .pie-pagina .grupo-1 {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px; } }

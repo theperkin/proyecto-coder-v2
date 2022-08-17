@@ -1,1 +1,28 @@
-$color-principal: #01adef
+$color-principal: #01adef;
+$color-secundario: #0a1a2a;
+
+//* EXTENDS
+
+%flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%dimension {
+    width: 100%;
+    height: 100%;
+}
+
+//*MIXIN
+@mixin dimension ($ancho, $largo) {
+    width: $ancho;
+    height: $largo;
+}
+
+//*MAP
+$imagen-team: (
+    border-radius: 10px 10px 10px 10px,
+    -webkit-border-radius: 10px 10px 10px 10px,
+    -moz-border-radius: 10px 10px 10px 10px,
+)
