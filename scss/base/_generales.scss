@@ -29,7 +29,7 @@ body {
 @media (max-width: 950px) {
 
     header nav .fixed-top {
-        position: none;
+        position: static;
     }
 
     main section .equipos .botones {
